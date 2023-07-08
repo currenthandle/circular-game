@@ -8,6 +8,7 @@ export default function BuildingCard() {
 
   return (
     <div
+      className='h-[130px] pb-8'
       onMouseEnter={(e) => setIsFlipped(true)}
       onMouseLeave={(e) => setIsFlipped(false)}
     >

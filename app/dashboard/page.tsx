@@ -5,7 +5,6 @@
 import Image from 'next/image'
 import Button from '../components/Button'
 import BuildingCard from './components/BuildingCard'
-// import { useState } from 'react'
 
 export default function Dashboard() {
   return (
@@ -21,7 +20,7 @@ export default function Dashboard() {
         <Buildings />
       </div>
       {/* SCORES */}
-      <div className='h-full border-2 border-box border-red-500 col-span-4'>
+      <div className='h-full border-2 border-box border-red-500 col-span-4 flex flex-col justify-between'>
         <div className='aspect-square w-full relative border-2 border-box border-green-400'>
           <Image
             src='/rotate-earth.gif'
@@ -30,6 +29,30 @@ export default function Dashboard() {
             className='object-contain'
           />
         </div>
+        <Scores />
+      </div>
+    </div>
+  )
+}
+
+function Scores() {
+  return (
+    <div className='text-white font-bold flex flex-col justify-between h-56 p-4 bg-slate-300 bg-opacity-30'>
+      <div className='flex justify-between'>
+        <div>Main Score</div>
+        <div>19283847</div>
+      </div>
+      <div className='flex justify-between'>
+        <div>Circularity</div>
+        <div>6565656</div>
+      </div>
+      <div className='flex justify-between'>
+        <div>Development</div>
+        <div>7767677</div>
+      </div>
+      <div className='flex justify-between'>
+        <div>Population</div>
+        <div>1000</div>
       </div>
     </div>
   )
@@ -37,9 +60,9 @@ export default function Dashboard() {
 
 function Buildings() {
   return (
-    <div className='bg-slate-300  bg-opacity-30 text-white font-bold p-4 border-blue-500 border-2 border-box   '>
+    <div className='bg-slate-300  bg-opacity-30 text-white font-bold p-4 border-blue-500 border-2 border-box h-[250px]  '>
       <h2>My Buildings</h2>
-      <div className='grid grid-cols-4 h-full w-full border-green-500 border-2 border-box  justify-center items-center'>
+      <div className='grid grid-cols-4 h-full w-full border-green-500 border-2 border-box  justify-center'>
         {Array(4)
           .fill(0)
           .map((_, i) => (
