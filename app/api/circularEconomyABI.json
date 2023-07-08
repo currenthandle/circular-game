@@ -1,0 +1,105 @@
+{
+    "_format": "hh-sol-artifact-1",
+    "contractName": "Game",
+    "sourceName": "contracts/Game.sol",
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "resourcesAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "buildingsAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "equipmentAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_player",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [],
+        "name": "buildingsContract",
+        "outputs": [
+          {
+            "internalType": "contract Buildings",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "equipmentContract",
+        "outputs": [
+          {
+            "internalType": "contract Equipment",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "nextTurn",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "player",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "resourcesContract",
+        "outputs": [
+          {
+            "internalType": "contract Resources",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "turn",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ]
+}
