@@ -2,6 +2,7 @@
 //   return <div className='h-full border-2 border-red-500'></div>
 // }
 
+import Image from 'next/image'
 import Button from '../components/Button'
 
 export default function Dashboard() {
@@ -13,11 +14,32 @@ export default function Dashboard() {
         <Actions />
       </div>
       {/* RESOURCES + BUILDING & INDUSTEIS */}
-      <div className='h-full border-2 border-red-500 col-span-5'></div>
+      <div className='h-full border-2 border-red-500 col-span-5'>
+        <Resources />
+      </div>
       {/* SCORES */}
-      <div className='h-full border-2 border-red-500 col-span-4'></div>
+      <div className='h-full border-2 border-red-500 col-span-4'>
+        <div className='w-full h-4/6 relative'>
+          <Image
+            src='/rotate-earth.gif'
+            alt='Rotating Earth'
+            fill
+            className='object-contain'
+          />
+        </div>
+      </div>
     </div>
   )
+}
+
+function Resources() {
+  return (
+    <div className='text-white font-bold bg-slate-300 bg-opacity-30 h-4/6 grid-cols-3'></div>
+  )
+}
+
+function Card() {
+  return <div className='h-1/3 w-1/3 border-2 border-red-500'></div>
 }
 
 function Menu() {
