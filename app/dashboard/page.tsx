@@ -34,10 +34,10 @@ export default function Dashboard() {
 
 function Resources() {
   return (
-    <div className='bg-slate-300 bg-opacity-30 text-white font-bold p-4 '>
+    <div className='bg-slate-300 h-4/6 bg-opacity-30 text-white font-bold p-4  overflow-scroll'>
       <h2>My Planet</h2>
-      <div className='mt-4 h-4/6 grid grid-cols-3 place-items-center gap-4'>
-        {Array(9)
+      <div className='mt-4  grid grid-cols-3 auto-rows-min place-items-center gap-4'>
+        {Array(12)
           .fill(0)
           .map((_, i) => (
             <Cell key={i} />
@@ -49,7 +49,7 @@ function Resources() {
 
 function Cell() {
   return (
-    <div className='h-full w-full border-2 border-red-500 flex justify-center'>
+    <div className='h-full w-full flex justify-center'>
       <Card />
     </div>
   )
@@ -57,7 +57,7 @@ function Cell() {
 
 function Card() {
   return (
-    <div className='h-full w-4/6 border-2 border-green-500 p-2 bg-[#0D101B]'>
+    <div className='h-full w-4/6 p-2 bg-[#0D101B]'>
       <div className='border-2 border-red-500 aspect-square relative'>
         <Image src='/water.png' alt='card' fill className='object-contain' />
       </div>
