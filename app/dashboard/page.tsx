@@ -20,7 +20,7 @@ export default function Dashboard() {
       </div>
       {/* SCORES */}
       <div className='h-full border-2 border-red-500 col-span-4'>
-        <div className='w-full h-4/6 relative border-2 border-green-400'>
+        <div className='w-full h-4/6 relative border-2 border-green-400 h-full'>
           <Image
             src='/rotate-earth.gif'
             alt='Rotating Earth'
