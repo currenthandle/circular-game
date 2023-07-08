@@ -20,21 +20,12 @@ const wagmiConfig = createConfig({
   publicClient,
 })
 
-function Something() {
-  return (
-    <div>
-      <h1>Something</h1>
-    </div>
-  )
-}
-
 const ethereumClient = new EthereumClient(wagmiConfig, chains)
 const WagmiProvider = ({ children }: WagmiProviderType) => {
   return (
     <>
       <WagmiConfig config={wagmiConfig}>{children}</WagmiConfig>
       <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
-      <Something />
     </>
   )
 }
