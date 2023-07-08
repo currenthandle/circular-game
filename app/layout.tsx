@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
-      <body className='bg-earth bg-no-repeat bg-center bg-cover h-screen w-screen'>
+    <html className='h-full w-full' lang='en'>
+      <body className='bg-earth bg-no-repeat bg-center bg-cover h-full w-full'>
         <Providers>
           <PageLayout>{children}</PageLayout>
         </Providers>
