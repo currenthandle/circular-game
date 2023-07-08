@@ -20,7 +20,7 @@ export default function Dashboard() {
       </div>
       {/* SCORES */}
       <div className='h-full border-2 border-box border-red-500 col-span-4'>
-        <div className='w-full h-4/6 relative border-2 border-box border-green-400'>
+        <div className='aspect-square w-full relative border-2 border-box border-green-400'>
           <Image
             src='/rotate-earth.gif'
             alt='Rotating Earth'
@@ -35,7 +35,7 @@ export default function Dashboard() {
 
 function Buildings() {
   return (
-    <div className='bg-slate-300 h-2/6 bg-opacity-30 text-white font-bold p-4 border-blue-500 border-2 border-box   '>
+    <div className='bg-slate-300  bg-opacity-30 text-white font-bold p-4 border-blue-500 border-2 border-box   '>
       <h2>My Buildings</h2>
       <div className='grid grid-cols-4 h-full w-full border-green-500 border-2 border-box  justify-center items-center'>
         {Array(4)
@@ -62,7 +62,7 @@ function Buildings() {
 
 function Resources() {
   return (
-    <div className='bg-slate-300 h-4/6 bg-opacity-30 text-white font-bold p-4 flex flex-col'>
+    <div className='bg-slate-300 h-[600px] bg-opacity-30 text-white font-bold p-4 flex flex-col'>
       <h2>My Planet</h2>
       <div className='mt-4 flex-grow grid grid-cols-3 auto-rows-min place-items-center gap-4 overflow-scroll'>
         {Array(12)
@@ -74,6 +74,7 @@ function Resources() {
     </div>
   )
 }
+
 function Cell() {
   return (
     <div className='w-full flex justify-center h-full max-h-full'>
@@ -84,7 +85,7 @@ function Cell() {
 
 function Card() {
   return (
-    <div className='w-4/6 p-2 bg-[#0D101B] border-2 border-box border-red-400'>
+    <div className='w-8/12 p-2 bg-[#0D101B] border-2 border-box border-red-400'>
       <div className='aspect-square relative'>
         <Image src='/water.png' alt='card' fill className='object-contain' />
       </div>
@@ -97,7 +98,7 @@ function Card() {
 
 function Menu() {
   return (
-    <div className='h-3/6 p-4 flex flex-col text-white font-bold bg-slate-300 bg-opacity-30'>
+    <div className=' p-4 flex flex-col text-white font-bold bg-slate-300 bg-opacity-30'>
       <h3>Menu</h3>
       <div className='p-2 h-full flex flex-col justify-between'>
         <div>
@@ -119,7 +120,7 @@ function Menu() {
 
 function Actions() {
   return (
-    <div className='flex flex-col h-2/6 justify-between h-5/6 pt-4'>
+    <div className='flex flex-col  justify-between  pt-4'>
       <Button type='secondary' width='w-full' height='h-16'>
         Preview
       </Button>
