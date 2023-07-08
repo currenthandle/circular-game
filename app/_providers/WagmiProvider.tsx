@@ -25,6 +25,7 @@ const WagmiProvider = ({ children }: WagmiProviderType) => {
   return (
     <>
       <WagmiConfig config={wagmiConfig}>{children}</WagmiConfig>
+      jhsgfasdhjgfk
       <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
     </>
   )
