@@ -10,9 +10,9 @@ export default function Home() {
     <main className='h-full'>
       <Header />
       {/* BODY */}
-      <div className='bg-white h-full min-h-full flex flex-col items-center justify-center'>
+      <div className='-mt-24 h-full min-h-full flex flex-col items-center justify-center'>
         <Button text='New Game' />
-        <Button text='Scores' />
+        <Button type='secondary' text='Scores' />
       </div>
     </main>
   )
