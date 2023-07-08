@@ -19,7 +19,7 @@ export default function Dashboard() {
       </div>
       {/* SCORES */}
       <div className='h-full border-2 border-red-500 col-span-4'>
-        <div className='w-full h-4/6 relative'>
+        <div className='w-full h-4/6 relative border-2 border-green-400'>
           <Image
             src='/rotate-earth.gif'
             alt='Rotating Earth'
@@ -34,12 +34,38 @@ export default function Dashboard() {
 
 function Resources() {
   return (
-    <div className='text-white font-bold bg-slate-300 bg-opacity-30 h-4/6 grid-cols-3'></div>
+    <div className='bg-slate-300 bg-opacity-30 text-white font-bold p-4 '>
+      <h2>My Planet</h2>
+      <div className='mt-4 h-4/6 grid grid-cols-3 place-items-center gap-4'>
+        {Array(9)
+          .fill(0)
+          .map((_, i) => (
+            <Cell key={i} />
+          ))}
+      </div>
+    </div>
+  )
+}
+
+function Cell() {
+  return (
+    <div className='h-full w-full border-2 border-red-500 flex justify-center'>
+      <Card />
+    </div>
   )
 }
 
 function Card() {
-  return <div className='h-1/3 w-1/3 border-2 border-red-500'></div>
+  return (
+    <div className='h-full w-4/6 border-2 border-green-500 p-2 bg-[#0D101B]'>
+      <div className='border-2 border-red-500 aspect-square relative'>
+        <Image src='/water.png' alt='card' fill className='object-contain' />
+      </div>
+      <div className='flex justify-center'>
+        <h3>Water</h3>
+      </div>
+    </div>
+  )
 }
 
 function Menu() {
