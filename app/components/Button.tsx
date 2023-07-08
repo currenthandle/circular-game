@@ -1,18 +1,27 @@
 type Props = {
-  text: string
+  children: string
   type?: string
+  height?: string
+  width?: string
+  margin?: string
 }
 
-export default function Button({ text, type = 'main' }: Props) {
-  let styles = 'bg-white text-black'
+export default function Button({
+  children,
+  type = 'main',
+  height = 'h-12',
+  width = 'w-72',
+  margin = 'mb-2',
+}: Props) {
+  let styles = 'bg-white text-black bg-opacity-60'
   if (type === 'secondary') {
-    styles = 'bg-blue-400 text-white bg-slate-400'
+    styles = 'bg-blue-400 text-white bg-slate-300 bg-opacity-30'
   }
   return (
     <div
-      className={`capitalize font-bold mb-2 flex justify-center items-center bg-opacity-60 w-72 h-12 ${styles} `}
+      className={`capitalize font-bold flex justify-center items-center ${height} ${width} ${margin} ${styles} `}
     >
-      {text}
+      {children}
     </div>
   )
 }

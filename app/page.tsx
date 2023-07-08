@@ -8,8 +8,8 @@ import Header from './components/Header'
 export default function Home() {
   return (
     <main className='h-full -mt-24 flex flex-col items-center justify-center'>
-      <Button text='New Game' />
-      <Button type='secondary' text='Scores' />
+      <Button>New Game</Button>
+      <Button type='secondary'>Scores</Button>
     </main>
   )
 }
