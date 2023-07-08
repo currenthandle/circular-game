@@ -1,4 +1,5 @@
 import Providers from './_providers/Providers'
+import PageLayout from './components/PageLayout'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='bg-earth bg-no-repeat bg-center bg-cover h-screen w-screen'>
-        <Providers>{children}</Providers>
+        <Providers>
+          <PageLayout>{children}</PageLayout>
+        </Providers>
       </body>
     </html>
   )

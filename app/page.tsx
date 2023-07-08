@@ -7,13 +7,9 @@ import Header from './components/Header'
 
 export default function Home() {
   return (
-    <main className='h-full'>
-      <Header />
-      {/* BODY */}
-      <div className='-mt-24 h-full min-h-full flex flex-col items-center justify-center'>
-        <Button text='New Game' />
-        <Button type='secondary' text='Scores' />
-      </div>
+    <main className='h-full -mt-24 flex flex-col items-center justify-center'>
+      <Button text='New Game' />
+      <Button type='secondary' text='Scores' />
     </main>
   )
 }
