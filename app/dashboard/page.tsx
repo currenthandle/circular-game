@@ -4,7 +4,8 @@
 
 import Image from 'next/image'
 import Button from '../components/Button'
-import BuildingCard from './components/BuildingCard'
+import BuildingCard, { Building } from './components/BuildingCard'
+import buildings from '@/public/buildings.json'
 
 export default function Dashboard() {
   return (
@@ -63,27 +64,9 @@ function Buildings() {
     <div className='bg-slate-300  bg-opacity-30 text-white font-bold p-4 border-blue-500 border-2 border-box h-[250px]  '>
       <h2>My Buildings</h2>
       <div className='grid grid-cols-4 h-full w-full border-green-500 border-2 border-box  justify-center'>
-        {Array(4)
-          .fill(0)
-          .map((_, i) => (
-<<<<<<< HEAD
-            <BuildingCard key={i} />
-=======
-            <div className='w-4/6 p-2 bg-[#0D101B] border-2 border-red-400' key={i}>
-              <div className='aspect-square relative'>
-                <Image
-                  src='/water.png'
-                  alt='card'
-                  fill
-                  className='object-contain '
-                />
-              </div>
-              <div className='flex justify-center '>
-                <h3>Water</h3>
-              </div>
-            </div>
->>>>>>> 9e312ff (fix)
-          ))}
+        {buildings.map((building: Building) => (
+          <BuildingCard key={building.title} {...building} />
+        ))}
       </div>
     </div>
   )
