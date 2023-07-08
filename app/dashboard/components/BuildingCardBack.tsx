@@ -1,6 +1,7 @@
 import { Cost } from './BuildingCard'
 
 interface BuildingCardBackProps {
+  color: string
   description: string
   circularity: number
   development: number
@@ -9,6 +10,7 @@ interface BuildingCardBackProps {
 }
 
 export default function BuildingCardBack({
+  color,
   description,
   circularity,
   development,
@@ -16,7 +18,10 @@ export default function BuildingCardBack({
   lifetime,
 }: BuildingCardBackProps) {
   return (
-    <div className='text-[8px] h-[162px] p-2 bg-[#0D101B] border-2 border-box border-red-400  m-2 flex flex-col space-y-2'>
+    <div
+      style={{ backgroundColor: color }}
+      className={`text-[8px] h-[162px] p-2  border-2 border-box border-red-400  m-2 flex flex-col space-y-2`}
+    >
       <div>
         <p>{description}</p>
         <p>Circularity {circularity}</p>

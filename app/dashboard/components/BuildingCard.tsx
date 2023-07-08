@@ -37,6 +37,7 @@ export default function BuildingCard(building: Building) {
     >
       {isFlipped ? (
         <BuildingCardBack
+          color={building.color}
           description={building.description}
           circularity={building.circularity}
           development={building.development}
@@ -44,7 +45,11 @@ export default function BuildingCard(building: Building) {
           lifetime={building.lifetime}
         />
       ) : (
-        <BuildingCardFront img={building.img} title={building.title} />
+        <BuildingCardFront
+          color={building.color}
+          img={building.img}
+          title={building.title}
+        />
       )}
     </div>
   )
