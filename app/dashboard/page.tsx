@@ -14,7 +14,7 @@ export default function Dashboard() {
         <Actions />
       </div>
       {/* RESOURCES + BUILDING & INDUSTEIS */}
-      <div className='h-full border-2 border-red-500 col-span-5 flex flex-col justify-between'>
+      <div className='h-full border-2 border-red-500 col-span-5 flex flex-col justify-between space-y-4'>
         <Resources />
         <Buildings />
       </div>
@@ -37,13 +37,6 @@ function Buildings() {
   return (
     <div className='bg-slate-300 h-2/6 bg-opacity-30 text-white font-bold p-4  overflow-scroll'>
       <h2>My Buildings</h2>
-      {/* <div className='place-items-center gap-4'>
-        {Array(12)
-          .fill(0)
-          .map((_, i) => (
-            <Cell key={i} />
-          ))}
-      </div> */}
     </div>
   )
 }
