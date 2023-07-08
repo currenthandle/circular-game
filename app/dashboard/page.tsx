@@ -66,7 +66,23 @@ function Buildings() {
         {Array(4)
           .fill(0)
           .map((_, i) => (
+<<<<<<< HEAD
             <BuildingCard key={i} />
+=======
+            <div className='w-4/6 p-2 bg-[#0D101B] border-2 border-red-400' key={i}>
+              <div className='aspect-square relative'>
+                <Image
+                  src='/water.png'
+                  alt='card'
+                  fill
+                  className='object-contain '
+                />
+              </div>
+              <div className='flex justify-center '>
+                <h3>Water</h3>
+              </div>
+            </div>
+>>>>>>> 9e312ff (fix)
           ))}
       </div>
     </div>
