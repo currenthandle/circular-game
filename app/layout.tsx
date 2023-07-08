@@ -15,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      className='bg-earth bg-no-repeat bg-center bg-cover min-h-screen min-w-screen'
+    >
       <body className={inter.className}>
         <Providers>{children}</Providers>
       </body>
