@@ -1,15 +1,11 @@
-'use client'
-import Image from 'next/image'
-import Test from '@/app/components/test'
-import { Web3Button } from '@web3modal/react'
+// 'use client'
 import Button from '@/app/components/Button'
-import Header from './components/Header'
+import HomeActions from './components/HomeActions'
 
 export default function Home() {
   return (
     <main className='h-full -mt-24 flex flex-col items-center justify-center'>
-      <Button>New Game</Button>
-      <Button type='secondary'>Scores</Button>
+      <HomeActions />
     </main>
   )
 }

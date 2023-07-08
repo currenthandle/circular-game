@@ -133,7 +133,8 @@ function Menu() {
 function Actions() {
   return (
     <div className='flex flex-col  justify-between  pt-4'>
-      <Button type='secondary' width='w-full' height='h-16'>
+      actions
+      {/* <Button type='secondary' width='w-full' height='h-16'>
         Preview
       </Button>
       <Button type='secondary' width='w-full' height='h-16'>
@@ -141,7 +142,7 @@ function Actions() {
       </Button>
       <Button type='secondary' width='w-full' height='h-16' margin=''>
         Next Year
-      </Button>
+      </Button> */}
     </div>
   )
 }
