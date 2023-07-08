@@ -1,5 +1,5 @@
 // export default function Dashboard() {
-//   return <div className='h-full border-2 border-red-500'></div>
+//   return <div className='h-full border-2 border-box border-red-500'></div>
 // }
 
 import Image from 'next/image'
@@ -9,18 +9,18 @@ export default function Dashboard() {
   return (
     <div className='grid grid-cols-12 h-full gap-10 py-8 px-12'>
       {/* MENU + Preview */}
-      <div className='flex flex-col justify-between  h-full border-2 border-red-500 col-span-3'>
+      <div className='flex flex-col justify-between  h-full border-2 border-box border-red-500 col-span-3'>
         <Menu />
         <Actions />
       </div>
       {/* RESOURCES + BUILDING & INDUSTEIS */}
-      <div className='h-full border-2 border-red-500 col-span-5 flex flex-col justify-between space-y-4'>
+      <div className='h-full border-2 border-box border-red-500 col-span-5 flex flex-col justify-between space-y-4'>
         <Resources />
         <Buildings />
       </div>
       {/* SCORES */}
-      <div className='h-full border-2 border-red-500 col-span-4'>
-        <div className='w-full h-4/6 relative border-2 border-green-400 h-full'>
+      <div className='h-full border-2 border-box border-red-500 col-span-4'>
+        <div className='w-full h-4/6 relative border-2 border-box border-green-400'>
           <Image
             src='/rotate-earth.gif'
             alt='Rotating Earth'
@@ -35,22 +35,22 @@ export default function Dashboard() {
 
 function Buildings() {
   return (
-    <div className='bg-slate-300 h-2/6 bg-opacity-30 text-white font-bold p-4 border-blue-500 border-2'>
+    <div className='bg-slate-300 h-2/6 bg-opacity-30 text-white font-bold p-4 border-blue-500 border-2 border-box   '>
       <h2>My Buildings</h2>
-      <div className='grid grid-cols-4 auto-rows-min  w-full border-green-500 border-2'>
+      <div className='grid grid-cols-4 h-full w-full border-green-500 border-2 border-box  justify-center items-center'>
         {Array(4)
           .fill(0)
           .map((_, i) => (
-            <div className='w-4/6 p-2 bg-[#0D101B] border-2 border-red-400'>
-              <div className='aspect-square relative'>
+            <div className=' p-2 bg-[#0D101B] border-2 border-box border-red-400  m-2'>
+              <div className='aspect-square relative '>
                 <Image
                   src='/water.png'
                   alt='card'
                   fill
-                  className='object-contain'
+                  className='object-contain '
                 />
               </div>
-              <div className='flex justify-center'>
+              <div className='flex justify-center '>
                 <h3>Water</h3>
               </div>
             </div>
@@ -68,7 +68,7 @@ function Resources() {
         {Array(12)
           .fill(0)
           .map((_, i) => (
-            <Card key={i} />
+            <Cell key={i} />
           ))}
       </div>
     </div>
@@ -84,7 +84,7 @@ function Cell() {
 
 function Card() {
   return (
-    <div className='w-4/6 p-2 bg-[#0D101B] border-2 border-red-400'>
+    <div className='w-4/6 p-2 bg-[#0D101B] border-2 border-box border-red-400'>
       <div className='aspect-square relative'>
         <Image src='/water.png' alt='card' fill className='object-contain' />
       </div>
