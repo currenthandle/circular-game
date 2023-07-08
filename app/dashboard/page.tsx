@@ -4,6 +4,8 @@
 
 import Image from 'next/image'
 import Button from '../components/Button'
+import BuildingCard from './components/BuildingCard'
+// import { useState } from 'react'
 
 export default function Dashboard() {
   return (
@@ -41,19 +43,7 @@ function Buildings() {
         {Array(4)
           .fill(0)
           .map((_, i) => (
-            <div className=' p-2 bg-[#0D101B] border-2 border-box border-red-400  m-2'>
-              <div className='aspect-square relative '>
-                <Image
-                  src='/water.png'
-                  alt='card'
-                  fill
-                  className='object-contain '
-                />
-              </div>
-              <div className='flex justify-center '>
-                <h3>Water</h3>
-              </div>
-            </div>
+            <BuildingCard key={i} />
           ))}
       </div>
     </div>
