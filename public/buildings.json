@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Solar Power Plant",
+    "color": "#C1C1C1",
+    "img": "/solar-plant.png",
+    "description": "Each plant gives you Energy 20/year",
+    "circularity": 5,
+    "development": 5,
+    "cost": {
+      "energy": 100,
+      "water": 20,
+      "minerals": 40,
+      "synthetics": 10,
+      "solar": 2
+    },
+    "lifetime": 20
+  },
+  {
+    "title": "Wind Power Plant",
+    "color": "#013A6E",
+    "img": "/wind-plant.png",
+    "description": "Each plant gives you Energy 25/year",
+    "circularity": -5,
+    "development": 5,
+    "cost": {
+      "energy": 100,
+      "water": 50,
+      "minerals": 100,
+      "synthetics": 10,
+      "turbine": 1
+    },
+    "lifetime": 20
+  },
+  {
+    "title": "Sustainable Farm",
+    "color": "#476735",
+    "img": "/sustainable-farm.png",
+    "description": "Each farm gives you Food 15/year",
+    "circularity": 10,
+    "development": 5,
+    "cost": {
+      "energy": 50,
+      "water": 70,
+      "minerals": 40,
+      "synthetics": 10,
+      "biofertilizers": 4
+    },
+    "lifetime": 20
+  },
+  {
+    "title": "Industrial Farm",
+    "color": "#11190A",
+    "img": "/industrial-farm.png",
+    "description": "Each farm gives you Food 25/year",
+    "circularity": -10,
+    "development": 5,
+    "cost": {
+      "energy": 100,
+      "water": 150,
+      "minerals": 20,
+      "synthetics": 10,
+      "pesticides": 2
+    },
+    "lifetime": 20
+  }
+]
