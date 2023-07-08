@@ -35,13 +35,25 @@ export default function Dashboard() {
 
 function Buildings() {
   return (
-    <div className='bg-slate-300 h-2/6 bg-opacity-30 text-white font-bold p-4 flex flex-col border-blue-500 border-2'>
+    <div className='bg-slate-300 h-2/6 bg-opacity-30 text-white font-bold p-4 border-blue-500 border-2'>
       <h2>My Buildings</h2>
-      <div className='grid grid-cols-4 w-full border-green-500 border-2 h-full'>
+      <div className='grid grid-cols-4 auto-rows-min  w-full border-green-500 border-2'>
         {Array(4)
           .fill(0)
           .map((_, i) => (
-            <Cell key={i} />
+            <div className='w-4/6 p-2 bg-[#0D101B] border-2 border-red-400'>
+              <div className='aspect-square relative'>
+                <Image
+                  src='/water.png'
+                  alt='card'
+                  fill
+                  className='object-contain'
+                />
+              </div>
+              <div className='flex justify-center'>
+                <h3>Water</h3>
+              </div>
+            </div>
           ))}
       </div>
     </div>

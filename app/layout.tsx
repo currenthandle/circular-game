@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html className='' lang='en'>
-      <body className='bg-earth bg-no-repeat bg-center bg-cover h-full w-full'>
+      <body className='bg-earth bg-no-repeat bg-center bg-cover h-screen w-full max-h-screen'>
         <Providers>
           <PageLayout>{children}</PageLayout>
         </Providers>
