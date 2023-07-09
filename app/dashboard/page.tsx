@@ -8,86 +8,86 @@ import Button from '../components/Button'
 import BuildingCard, { Building } from './components/BuildingCard'
 import buildings from '@/public/buildings.json'
 
-import { useAccount, useContractRead, useContractReads } from 'wagmi'
-import circEconABI from '@/abi/CircularEconomy.sol/CircularEconomy.json'
-import resourcesABI from '@/abi/Resources.sol/Resources.json'
-import equipmentAbi from '@/abi/Equipment.sol/Equipment.json'
-import buildingsABI from '@/abi/Buildings.sol/Buildings.json'
-import { useState } from 'react'
+// import { useAccount, useContractRead, useContractReads } from 'wagmi'
+// import circEconABI from '@/abi/CircularEconomy.sol/CircularEconomy.json'
+// import resourcesABI from '@/abi/Resources.sol/Resources.json'
+// import equipmentAbi from '@/abi/Equipment.sol/Equipment.json'
+// import buildingsABI from '@/abi/Buildings.sol/Buildings.json'
+// import { useState } from 'react'
 
-const circEconAddr =
-  '0x9d3530460e6a76d2ac584034f2e57781b5058dc5' as `0x${string}`
-const resourceAddr =
-  '0xfb17bf37879F1EA3bafb2E4a33Dcb3A4E0d8dfAF' as `0x${string}`
-const equipmentAddr =
-  '0xcf4E5c7301623E4445fc580a6d5c725D62118D4a' as `0x${string}`
-const buildingAddr =
-  '0x08537D2Fa64eF34c2989000803cF1c47c8768693' as `0x${string}`
-const circEconContract = {
-  address: circEconAddr,
-  abi: circEconABI.abi,
-}
-const resourceContract = {
-  address: resourceAddr,
-  abi: resourcesABI.abi,
-}
-const equipmentContract = {
-  address: equipmentAddr,
-  abi: equipmentAbi.abi,
-}
-const buildingContract = {
-  address: buildingAddr,
-  abi: buildingsABI.abi,
-}
+// const circEconAddr =
+//   '0x9d3530460e6a76d2ac584034f2e57781b5058dc5' as `0x${string}`
+// const resourceAddr =
+//   '0xfb17bf37879F1EA3bafb2E4a33Dcb3A4E0d8dfAF' as `0x${string}`
+// const equipmentAddr =
+//   '0xcf4E5c7301623E4445fc580a6d5c725D62118D4a' as `0x${string}`
+// const buildingAddr =
+//   '0x08537D2Fa64eF34c2989000803cF1c47c8768693' as `0x${string}`
+// const circEconContract = {
+//   address: circEconAddr,
+//   abi: circEconABI.abi,
+// }
+// const resourceContract = {
+//   address: resourceAddr,
+//   abi: resourcesABI.abi,
+// }
+// const equipmentContract = {
+//   address: equipmentAddr,
+//   abi: equipmentAbi.abi,
+// }
+// const buildingContract = {
+//   address: buildingAddr,
+//   abi: buildingsABI.abi,
+// }
 
 export default function Dashboard() {
-  const {
-    address: userAddress,
-    isConnecting,
-    isReconnecting,
-    isDisconnected,
-    isConnected,
-  } = useAccount()
+  // const {
+  //   address: userAddress,
+  //   isConnecting,
+  //   isReconnecting,
+  //   isDisconnected,
+  //   isConnected,
+  // } = useAccount()
 
   // const circEconAddr = process.env.CIRC_ECON_CONTRACT as `0x${string}`
-  console.log('circEconAddr', circEconAddr)
+  // console.log('circEconAddr', circEconAddr)
   // const [gameAddr, setGameAddr] = useState<`0x${string}` | null>(null)
 
-  const {
-    data: gameAddr,
-    isFetching,
-    isSuccess,
-    isError,
-    isLoading,
-  } = useContractRead({
-    address: circEconAddr,
-    abi: circEconABI.abi,
-    functionName: 'playerToGame',
-    args: [userAddress],
-  })
+  // const {
+  //   data: gameAddr,
+  //   isFetching,
+  //   isSuccess,
+  //   isError,
+  //   isLoading,
+  // } = useContractRead({
+  //   address: circEconAddr,
+  //   abi: circEconABI.abi,
+  //   functionName: 'playerToGame',
+  //   args: [userAddress],
+  // })
   // setGameAddr(gAddr as `0x${string}`)
 
-  console.log('gameAddr', gameAddr)
+  // console.log('gameAddr', gameAddr)
 
-  const {
-    data: resourcesBalance,
-    isError: resourceErr,
-    error,
-  } = useContractRead({
-    ...resourceContract,
-    functionName: 'resources',
-    // args: [gameAddr as `0x${string}`],
-    args: [],
-  })
+  // const {
+  //   data: resourcesBalance,
+  //   isError: resourceErr,
+  //   error,
+  // } = useContractRead({
+  //   ...resourceContract,
+  //   functionName: 'resources',
+  //   // args: [gameAddr as `0x${string}`],
+  //   args: [],
+  // })
 
-  console.log('resourceErr', resourceErr)
-  console.log('error', error)
-  // console.log('isError', isError)
-  // console.log('isFetching', isFetching)
-  // console.log('isSuccess', isSuccess)
+  // console.log('resourceErr', resourceErr)
+  // console.log('error', error)
+  // // console.log('isError', isError)
+  // // console.log('isFetching', isFetching)
+  // // console.log('isSuccess', isSuccess)
 
-  console.log('gameAddr', gameAddr)
-  console.log('resourcesBalance', resourcesBalance)
+  // console.log('gameAddr', gameAddr)
+  // console.log('resourcesBalance', resourcesBalance)
 
   // const {data: resourcesAddr } = useContractRead({
 

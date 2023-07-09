@@ -5,7 +5,9 @@ import HomeActions from './components/HomeActions'
 export default function Home() {
   return (
     <main className='h-full -mt-24 flex flex-col items-center justify-center'>
-      <HomeActions />
+      {/* <HomeActions /> */}
+      <Button>New Game</Button>
+      <Button type='secondary'>Scores</Button>
     </main>
   )
 }
