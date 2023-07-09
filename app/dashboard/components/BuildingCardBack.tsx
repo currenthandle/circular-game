@@ -20,7 +20,7 @@ export default function BuildingCardBack({
   return (
     <div
       style={{ backgroundColor: color }}
-      className={`text-[8px] h-[162px] p-2  border-2 border-box border-red-400  m-2 flex flex-col space-y-2`}
+      className={`text-[8px] h-[162px] p-2   border-box border-red-400  m-2 flex flex-col space-y-2`}
     >
       <div>
         <p>{description}</p>
