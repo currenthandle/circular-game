@@ -3,13 +3,13 @@ import React from 'react'
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { Web3Modal } from '@web3modal/react'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
-import { mainnet, gnosis } from 'wagmi/chains'
+import { mainnet, gnosis, goerli, sepolia } from 'wagmi/chains'
 
 type WagmiProviderType = {
   children: React.ReactNode
 }
 
-const chains = [mainnet, gnosis]
+const chains = [mainnet, gnosis, goerli, sepolia]
 const projectId = process.env.NEXT_PUBLIC_W3C_PID
 
 const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
